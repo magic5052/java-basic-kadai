@@ -19,9 +19,9 @@ public class Dictionary_Chapter21 {
         dic.put("muscat", "マスカット");
         dic.put("cherry", "さくらんぼ");
 
+        // 繰り返し処理
         for (String w : s) {
 
-            // 繰り返し処理をDictionary_Chapter21クラスに移動した
             String meaning = dic.get(w);
 
             if (meaning == null) {
