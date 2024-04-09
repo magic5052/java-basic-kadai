@@ -8,11 +8,9 @@ public class DictionaryExec_Chapter21 {
         Dictionary_Chapter21 d = new Dictionary_Chapter21();
 
         // 調べる英単語を配列にセットする
-        String[] newWord = { "apple", "banana", "grape", "orange" };
-        
+        String[] newWord = {"apple", "banana", "grape", "orange"};
+
         // 辞書を調べる
-        for (String word : newWord) {    
-            d.search(word);
-        }
+        d.search(newWord);
     }
 }

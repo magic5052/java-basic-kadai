@@ -4,9 +4,9 @@ import java.util.HashMap;
 
 public class Dictionary_Chapter21 {
 
-    public void search(String w) {
+    public void search(String[] s) {
 
-        HashMap<String, String> dic = new HashMap<String, String>();
+        HashMap<String, String> dic = new HashMap<>();
 
         dic.put("apple", "りんご");
         dic.put("peach", "桃");
@@ -19,15 +19,16 @@ public class Dictionary_Chapter21 {
         dic.put("muscat", "マスカット");
         dic.put("cherry", "さくらんぼ");
 
-        // 単語の意味を変数に代入する
-        String meaning = dic.get(w);
+        for (String w : s) {
 
-        // 単語が存在しない => 単語の意味が存在しない　 => meaning == null
-        if (meaning == null) {
-            System.out.println(w + "は辞書に存在しません");
-        } else {
-            System.out.println(w + "の意味は" + meaning);
+            // 繰り返し処理をDictionary_Chapter21クラスに移動した
+            String meaning = dic.get(w);
+
+            if (meaning == null) {
+                System.out.println(w + "は辞書に存在しません");
+            } else {
+                System.out.println(w + "の意味は" + meaning);
+            }
         }
-
     }
 }
